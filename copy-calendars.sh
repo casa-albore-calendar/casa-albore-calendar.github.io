@@ -1,7 +1,7 @@
 #!/bin/sh
 cd `dirname $0`
 
-if ! ping -t1 calendar.google.com ; then
+if ! ping -t2 calendar.google.com ; then
   echo "Can't ping calendar.google.com, assuming behind firewall and exiting"
   exit 1
 fi
