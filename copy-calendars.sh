@@ -7,9 +7,12 @@ curl https://calendar.google.com/calendar/ical/64f2d319jcgv1grt6ae2h3erqg%40grou
 
 if git diff|grep '^[-+]'|grep -v DTSTAMP|egrep -v '^(---|\+\+\+)'; then
 
+  echo "Changes detected - committing and pushing"
   git add -u
   git commit -m "update"
   git push
+else
+  echo "No changes detected"
 
 fi
 
