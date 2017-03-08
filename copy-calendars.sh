@@ -1,4 +1,7 @@
 #!/bin/sh
+unset http_proxy
+unset ALL_PROXY
+
 cd `dirname $0`
 
 if ! ping -t2 calendar.google.com ; then
