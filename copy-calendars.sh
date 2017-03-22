@@ -4,7 +4,7 @@ unset ALL_PROXY
 
 cd `dirname $0`
 
-if ! ping -t2 calendar.google.com ; then
+if ! /sbin/ping -t2 calendar.google.com ; then
   echo "Can't ping calendar.google.com, assuming behind firewall and exiting"
   exit 0
 fi
